@@ -11,11 +11,27 @@ const Label = styled.label`
   padding: 5px;
   display: flex;
   justify-content: space-between;
+  align-content: center;
 `;
 
 const Input = styled.input`
   margin-left: 25px;
   width: 200px;
+  outline: none;
+  border-radius: 10px;
+  color: ${props => props.theme.tertiary};
+  height: 25px;
+  border: 1px solid ${props => props.theme.tertiary};
+  padding: 10px;
+`;
+
+const Button = styled.button`
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 20px;
+  background: ${props => props.theme.primary};
+  color: ${props => props.theme.secondary};
+  font-size: 1.2rem;
 `;
 
 function AddMusicVote() {
@@ -78,9 +94,8 @@ function AddMusicVote() {
           onChange={event => setVote(event.target.value)}
         />
       </Label>
-      <button>Submit</button>
+      <Button>Submit</Button>
     </Form>
-    // <div>AddMusicVote</div>
   );
 }
 
