@@ -12,6 +12,7 @@ const Label = styled.label`
   display: flex;
   justify-content: space-between;
   align-content: center;
+  margin-top: 15px;
 `;
 
 const Input = styled.input`
