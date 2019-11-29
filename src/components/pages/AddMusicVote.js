@@ -26,6 +26,17 @@ const Input = styled.input`
   padding: 10px;
 `;
 
+const Select = styled.select`
+  margin-left: 25px;
+  width: 200px;
+  outline: none;
+  border-radius: 10px;
+  color: ${props => props.theme.tertiary};
+  height: 25px;
+  border: 1px solid ${props => props.theme.tertiary};
+  padding: 10px;
+`;
+
 const Button = styled.button`
   border-radius: 10px;
   padding: 5px;
@@ -56,9 +67,21 @@ function AddMusicVote() {
     setComment("");
     setVote("");
   }
-
+  console.log(song);
   return (
     <Form onSubmit={handleSubmit}>
+      <Label>
+        Choose Music
+        <Select onChange={event => setSong(event.target.value)}>
+          <option value="">Choose a song</option>
+          <option value="Humba humba">Humba humba</option>
+          <option value="I've been looking for freedom">
+            I've been looking for freedom
+          </option>
+          <option value="Wünsch dir was">Wünsch dir was</option>
+          <option value="Toxicity">Toxicity</option>
+        </Select>
+      </Label>
       <Label>
         Song
         <Input
