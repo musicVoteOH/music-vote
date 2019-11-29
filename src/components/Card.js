@@ -22,21 +22,21 @@ const CardDetails = styled.div`
   padding: 30px 0;
 `;
 
-function Card() {
+function Card({ song, artist, comment, vote }) {
   return (
     <CardContainer>
       <CardContent>
-        <h2>Song</h2>
-        <h3>Artist</h3>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
-          harum tempora natus eum minus doloremque, quam consequatur consectetur
-          fugiat magni! Vero, sit! Qui, corrupti mollitia! Eveniet modi
-          voluptatem harum incidunt.
-        </p>
+        <h2>{song}</h2>
+        <h3>{artist}</h3>
+        <p>{comment}</p>
         <CardDetails>
           <button>Details</button>
-          <div>Votes</div>
+          <div>
+            <span role="img" aria-label="star">
+              ⭐️
+            </span>{" "}
+            {vote}
+          </div>
         </CardDetails>
       </CardContent>
     </CardContainer>
